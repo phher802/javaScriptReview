@@ -43,3 +43,7 @@ function same(arr1, arr2){
     return true;
 }
 
+//this is O(N) linear time complexity
+// the idea behind freqCounter is to use object to construct a profile, a way of breaking down the content
+// of an arrary or string, and you can compare the breakdown to how another object looks
+//baseline: two arrays are broken down into objects, classified what are in the arrays/strings and compare the objects.
