@@ -2,10 +2,9 @@
 //or position and move towards the beginning, end,or middle based 
 //on a certain condition
 
-//problem: write a function called sumZero which accepts a sorted array
-//of integers.  the function should find the first pair where the sum is zero
-//Return an array that includes both values that sum to zero or undefined 
-//if a pair does not exist
+//problem: write a function called sumZero which accepts a sorted arrayof integers.  
+//the function should find the first pair where the sum is zero
+//Return an array that includes both values that sum to zero or undefined if a pair does not exist
 
 //start the left index at 0
 //start the right index at -1
@@ -31,7 +30,9 @@ function sumZero(arr){
     }
 
 }
-sumZero(-3,-2,0, 5, 6)
+
+arr = [-3,-2,0, 5, 6];
+console.log(sumZero(arr));
 
 
 //another problem
@@ -51,7 +52,7 @@ function countUniqueValues(arr){
     for(var j = 1; j < arr.lenghth; j++){
         if (arr[i] !== arr[j]){
             i++;
-            arr[i] = arr[j]   //sets i equal to j if i and j are not the same
+            arr[i] = arr[j];   //sets i equal to j if i and j are not the same
         }
     }
     return i + 1   //i = 0, and you're counting from 0, the actual count would be plus 1
