@@ -47,3 +47,50 @@ function same(arr1, arr2){
 // the idea behind freqCounter is to use object to construct a profile, a way of breaking down the content
 // of an arrary or string, and you can compare the breakdown to how another object looks
 //baseline: two arrays are broken down into objects, classified what are in the arrays/strings and compare the objects.
+//----------------------------------
+
+//challenge problem 2
+//write a function called sameFrequency
+//given two positive integers, find out if the two numbers have the same frequency of digits
+// solution MUST have the following complexities: time O(N)
+ sameFreq(182, 281)  //true
+ sameFreq(34,14)  // false
+ sameFreq(3589578, 5879385)  //true
+ sameFreq(22, 222)  //false
+
+//understand the problem:  the two numbers have to be the same length, num1 has to have the same numbers in num2
+// if they have the same freq, return true, or else false
+// write an edge case to determine if length are the same
+// create empty objects for num1 and num2
+// loop through the num1 and add to obj
+// loop through the num2 and compare to num1
+        // what happens if num1[0] !== num2[0] ?
+        
+
+function sameFreq(num1, num2){
+    let strNum1 = num1.toString();
+    let strNum2 = num2.toString();
+
+    if(strNum1.length !== strNum2.length){
+        return false;
+    }
+
+    let countNum1 = {};
+    let countNum2 = {};
+
+    for(let i = 0; i < strNum1.length; i++){
+        countNum1[strNum1[i]] = (countNum1[strNum1[i]] || 0) + 1
+    }
+
+    for(let j = 0; j < strNum2.length; j++){
+        countNum2[strNum2[j]] = (countNum2[strNum2[j]] || 0) + 1
+    }
+
+    for(let key in countNum1){
+        if(countNum1[key] !== countNum2[key]){
+            return false;
+        }
+    }
+    return true;
+
+}
