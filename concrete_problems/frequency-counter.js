@@ -62,9 +62,10 @@ function same(arr1, arr2){
 // if they have the same freq, return true, or else false
 // write an edge case to determine if length are the same
 // create empty objects for num1 and num2
-// loop through the num1 and add to obj
-// loop through the num2 and compare to num1
-        // what happens if num1[0] !== num2[0] ?
+// loop through the num1 and add to num1 obj
+// loop through the num2 and add to num 2 obj
+// loop through num 1 obj and compare to key objs in num2 
+    
         
 
 function sameFreq(num1, num2){
@@ -94,3 +95,37 @@ function sameFreq(num1, num2){
     return true;
 
 }
+
+//------------------------
+
+//challenge problem 3:  frequency counter / multiple pointers
+//implement a function called areThereDuplicates which accepts a variable number of arguments
+// and checks whether there are any duplicates among the arguments passed in
+// this can be solved this using the frequency counter pattern or the multiple pointers pattern
+
+areThereDuplicates(1, 2, 3 ) //false
+areThereDuplicates(1, 2, 2)  //true
+areThereDuplicates('a', 'b', 'c', 'a')  //true
+
+//break it down:
+    //set a variable as an empty obj
+    // add the args passed in, to the empty obj
+    // check to see if a key is greater than 1
+
+
+function areThereDuplicates(){
+    let collection = {};
+
+    for(let val in arguments){
+        collection[arguments[val]] = (collection[arguments[val]])
+    }
+
+    for(let key in collection){
+        if(collection[key] > 1){
+            return true;
+        }
+    }
+
+    return false;
+}
+
