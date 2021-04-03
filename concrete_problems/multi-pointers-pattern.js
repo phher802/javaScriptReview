@@ -58,3 +58,43 @@ function countUniqueValues(arr){
     return i + 1   //i = 0, and you're counting from 0, the actual count would be plus 1
 
 }
+
+//---------------------
+//3rd challenge problem:
+//write a function called averagePair.
+//given a sorted array of integers and a target average, determine if there is a pair of values in the 
+//array where the avg of the pair equals the target average
+//there may be more than one pair that matches the average target
+averagePair([1, 2, 3], 2.5)  //true
+averagePair([1, 3, 3, 5, 6, 7, 10, 12, 19], 8)  //true
+averagePair([-1, 0, 3, 4, 5, 6], 4.1)  //false
+averagePair([], 4)  //false
+
+//understand the problem: the sum/2 of two int in array must equal the target average
+//break it down:
+    //set two pointers, one at the beginnig of array and one at the end
+    //since array is sorted, assume start will be less than end
+    //use while loop to check that as an edge case
+    //set avg to start + end / 2
+    //use conditionals to check if the avg equals the target num
+    //if yes, return true
+    //if avg is less than num, then move start to next index by incrementing start
+    //if avg > num, then decrement the end index instead
+
+function averagePair(arr, num){
+    let start = 0;
+    let end = arr.length - 1;
+
+    while( start < end){
+        let avg = (arr[start] + arr[end]) / 2
+
+        if(avg === num){
+            return true;
+        }else if(avg < num){
+            start++
+        }else{
+            end--;
+        }
+    }
+    return false;
+}
