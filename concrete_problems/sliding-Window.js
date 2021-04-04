@@ -68,3 +68,47 @@ function maxSubarraySum2(arr, num){
 
     return total;
 }
+
+//----------------
+//challenge 3: inSubarrayLen
+//whrite a function called minSubarray which accepts two parameters - an array of postive integers and a positive integer
+//this function should return the minimal length of a contiguous subarray of which the sum is greater than
+// or equal to the integer passed to the function; if there isn't one, return 0 instead
+
+minSubarrayLen([2, 3, 1, 2, 4, 3], 7) // 2 b/c [4, 3] is the smallest subarray
+minSubarrayLen([2, 1, 6, 5, 4], 9)  // 2 b/c [5, 4] is the smallest subarray
+minSubarrayLen([3, 1, 7, 11, 2, 9, 8, 21, 62, 99, 19], 52)  //1 b/c [62]  is greater than 52
+minSubarrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 39)  // 3
+minSubarrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 55)  // 5
+minSubarrayLen([4, 3, 3, 8, 1, 2, 3], 11)  // 2
+minSubarrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 95)  //0
+
+//break it down:
+// looking for sum so set a var called total to zero
+// set two more vars at zero called start and end
+// set minLen to infinity
+// use while loop to find conditionals
+    //if total is less than sum 
+    //if total is greatr than sum
+
+function minSubarrayLen(arr, sum){
+    let total = 0;
+    let start = 0; 
+    let end = 0;
+    
+    let minLen = Infinity;
+
+    while(start < arr.length){
+        if(total < sum && end < arr.length){
+            total += arr[end];
+            end++;
+        }else if(total >= sum){
+            minLen = Math.min(minLen, end-start);
+            total -= arr[start];
+            start++;
+        }else{
+            break;
+        }
+    }
+    return minLen === Infinity ? 0 : minLen;
+}
