@@ -62,3 +62,16 @@ function recursiveRange(num){
 
     return num + recursiveRange(num - 1);
 }
+
+//------------
+//challenge 5: Fibonnaci sequence
+//write a recrusive function called fib which accepts a number and returns then nth number in the fibonnaci
+//sequence.  Fibonnaci sequence is the sequence of whole numbers 1, 1, 2, 3, 5, 8 which starts with 1 and 1, 
+//and where every number thereafter is equal to the sum of the previous two numbers
+
+function fib(n){
+    if(n <= 2){
+        return 1;
+    }
+    return fib(n - 1) + fib(n - 2);
+}
