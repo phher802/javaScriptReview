@@ -34,7 +34,8 @@ function collectOddValues(arr){
 
         helper(helperInput.slice(1));
     }
-    
+
     helper (arr);
     return result;
 }
+
