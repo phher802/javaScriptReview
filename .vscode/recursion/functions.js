@@ -38,6 +38,7 @@ function power(base, exponent){
     return base * power(base, exponent - 1);
 }
 
+//---------
 //Challenge 3:
 //write a function called productOfArray which takes in an array of numbers and returns the product of them all
 
@@ -47,4 +48,17 @@ function productOfArray(arr){
     }
      return arr[0] * productOfArray(arr.slice(1));
 
+}
+
+//------
+//challenge 4: Range
+//write a function called rescursiveRange which accepts a number and adds up all the numbers from 0 to the 
+//number passed to the function
+
+function recursiveRange(num){
+    if(num === 0){
+        return 0;
+    }
+
+    return num + recursiveRange(num - 1);
 }
