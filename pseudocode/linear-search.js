@@ -13,3 +13,7 @@ function linearSearch(arr, val){
     }
     return -1;
 }
+
+
+// O(N) time complexity
+//as N grows the length of the array grows and so does the time
