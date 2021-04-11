@@ -14,10 +14,10 @@ function search(arr, val){
         let currentElement = arr[middle];
 
         if (arr[middle] < val){
-            min = middle + 1;
+            min = currentElement + 1;
         }
         else if(arr[middle] > val){
-            max = middle -1;
+            max = currentElement -1;
 
         }else{
             return middle;
