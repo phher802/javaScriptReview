@@ -62,6 +62,15 @@ function addToArray(arr, type, id, score){
         return arr;
     }
 
+    if(type == "delete"){
+        for(let i in arr){
+            if(arr[i]["id"] == id){
+                arr.splice(i, 1);
+            }
+        }
+        return arr;
+    }
+
 }
 
 
