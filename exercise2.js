@@ -35,15 +35,33 @@ function insertObj(arr, obj){
 }
 
 
-function addToScoreArray(arr, type, score){
+function addToArray(arr, type, id, score){
     if(type == undefined) throw ("Type is required: create, read, update, delete");
 
-    this.id = arr.map(el => el.id).sort((a,b) => a - b)[arr.length - 1] + 1;
+    var newId = arr.map(el => el.id).sort((a,b) => a - b)[arr.length - 1] + 1;
 
     if(type == "create"){
-        let object = {id: this.id, score: score}
+        let object = {id: newId, score: score}
         insertObj(arr, object);       
     }
 
+    if(type == "read"){
+        for(let i in arr){
+            if(arr[i]["id"] == id){
+                return arr[i];
+            }
+        }
+    }
+
+    if(type == "update"){
+        for(let i in arr){
+            if(arr[i]["id"] == id){
+                arr["score"] = score;
+            }
+        }
+    }
+
 }
+
+
 
