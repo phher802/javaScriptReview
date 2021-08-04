@@ -56,9 +56,10 @@ function addToArray(arr, type, id, score){
     if(type == "update"){
         for(let i in arr){
             if(arr[i]["id"] == id){
-                arr["score"] = score;
+                arr[i]["score"] = score;
             }
         }
+        return arr;
     }
 
 }
