@@ -35,4 +35,23 @@ let userColor = undefined;
 let defaultColor = "blue";
 //if user defined a color, will use the userColor, otherwise use the default color
 let currentColor = userColor || defaultColor;
-console.log(currentColor);
+//console.log(currentColor);
+
+//Bitwise Operators (binary)
+//not really used in the real world
+//1 = 00000001  (8 bits which represents 1 byte of information in a computer)
+// 2 = 00000010
+
+
+//exercise: swap the values of two variables
+
+let a = 'red';
+let b = 'blue';
+
+let c = a;
+a = b;
+b = c;
+
+
+console.log(a);
+console.log(b);
