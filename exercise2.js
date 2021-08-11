@@ -36,7 +36,7 @@ function insertObj(arr, obj){
 
 
 function addToArray(arr, type, id, score){
-    if(type == undefined) throw ("Type is required: create, read, update, delete");
+    //if(type == undefined) throw ("Type is required: create, read, update, delete");
 
     var newId = arr.map(el => el.id).sort((a,b) => a - b)[arr.length - 1] + 1;
 
