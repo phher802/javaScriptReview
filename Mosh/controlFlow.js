@@ -3,12 +3,32 @@
 //-- if hour is between 12pm and 6pm : Good Afternoon
 //otherwise: Good Evening
 
-let hour = 19;
+let hour = 7;
 
-if(hour >=6 && hour < 12){
+if(hour >=6 && hour < 12)
     console.log("Good Morning")
-}else if(hour >= 12 && hour <= 18){
+else if(hour >= 12 && hour <= 18)
     console.log("Good Afternoon")
-}else{
+else
     console.log("Good Evening");
+
+
+//switch.. case 
+//compare the value of the variable to a bunch of other values
+//booleans are less common; they are more used with if statements
+//switch.. case can be used if you have a lot of values to compare with
+let role = 'guest';
+
+switch(role){
+    case 'guest':
+        console.log('Guest User');
+        break;
+    case 'moderator':
+        console.log('Moderator User');
+        break;
+    case 'administrator':
+        console.log('Administrator User');
+        break;
+    default:
+        console.log('Unknown Role');
 }
