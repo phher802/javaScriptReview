@@ -55,7 +55,7 @@ for(let i = 5; i >= 1; i--){
 let i = 0;
 while(i <= 5){
     if(i % 2 === 1) console.log(i);
-    i++;
+    i++;  //important to increment or else it will run forever creating an infinite loop
 }
 
 //using do..while loop
@@ -66,3 +66,31 @@ do {
     if(j % 2 === 1) console.log(j);
     j++;
 }while(j <=5);
+
+//infiite loops
+//while(true){}
+//for(let i = 0; i > 0) or for(let i = 0; i < 10; )
+        //forgetting to increment i or if i is greater than 0
+
+
+//for-in loop
+//when you want to display all the properties of an object
+//for-in loop is better for iterating over the properties of an object and not for arrays
+const person = {
+    name: "Namjoon",
+    age: 26
+};
+
+for(key in person)
+    console.log(key, person[key]);
+
+const colors = ['red', 'green', 'blue'];
+for (let index in colors)
+    console.log(index, colors[index]);
+    
+//in ES6 a new way to iterate over arrays
+//using for of, you don't have to deal with the index like the for in loop
+//for of loop is better to iterate over an array
+
+for(let color of colors)
+    console.log(color);
