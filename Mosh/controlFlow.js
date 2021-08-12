@@ -36,6 +36,7 @@ switch(role){
 
 //loops - repeat an action a number of times
 //for loop
+//find odd numbers
 for(let i = 0; i < 10; i++){
     //odd numbers
     if(i % 2 !== 0) console.log(i);
@@ -47,3 +48,21 @@ for(let i = 0; i < 10; i++){
 for(let i = 5; i >= 1; i--){
     if(i % 2 === 1) console.log(i);
 }
+
+//using while loop
+//declare variable externally
+//condition is evaluated ahead of time so if i = 9, the while loop won't execute
+let i = 0;
+while(i <= 5){
+    if(i % 2 === 1) console.log(i);
+    i++;
+}
+
+//using do..while loop
+//do while loops are always executed at least once even if condition is false\
+//because loop is executed at the end
+let j = 9;
+do {
+    if(j % 2 === 1) console.log(j);
+    j++;
+}while(j <=5);
