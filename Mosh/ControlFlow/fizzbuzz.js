@@ -5,7 +5,7 @@
 //not a number == "not a number";
 
 function fizzBuzz(input){
-    if(typeof input !== 'number') return 'Not a number';
+    if(typeof input !== 'number') return NaN;
   
     if((input % 3 === 0) && (input % 5 === 0)) return 'FizzBuzz';
     
@@ -15,5 +15,5 @@ function fizzBuzz(input){
     return input;
 }
 
-let findFizzBuzz = fizzBuzz(15);
+let findFizzBuzz = fizzBuzz(false);
 console.log(findFizzBuzz);
