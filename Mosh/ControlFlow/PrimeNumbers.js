@@ -15,17 +15,19 @@
 function showPrimes(limit){
     //this loop will iterate from 2 to limit
     for(let num = 2; num <= limit; num++){
-        // next loop checks to see if each number is prime or not
-        //find factors other than 1 and the number it self
-        let isPrime = true;
-        for(let factor = 2; factor < num; factor++){
-            if(num % factor === 0){
-                isPrime = false;
-                break;
-            }
-        }
-        if(isPrime) console.log(num);
+        if(isPrime(num)) console.log(num);
     }
 }
 
 showPrimes(20);
+
+//function checks to see if each number is prime or not
+//find factors other than 1 and the number it self
+function isPrime(number){
+
+    for(let factor = 2; factor < number; factor++){
+        if(number % factor === 0)  return false;
+    }
+
+    return true;
+}
