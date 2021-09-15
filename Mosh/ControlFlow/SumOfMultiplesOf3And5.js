@@ -4,7 +4,7 @@
 
 function sum(limit){
     var results = 0;
-    
+
     for(let i = 0; i <= limit; i++){
       if(i % 3 === 0 || i % 5 === 0){
           console.log(i);
@@ -15,4 +15,4 @@ function sum(limit){
   return results;
 }
 
-console.log(sum(10));
+//console.log(sum(10));
