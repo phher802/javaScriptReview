@@ -10,20 +10,25 @@ const marks = [80, 80, 50];
 
 
 function calculateGrade(marks){
-    var sum = 0;
-
-    for(let mark of marks){
-        sum += mark;
-    }
-    
-    var avg = sum / marks.length;
+  
+    const avg = calculateAverage(marks);
 
     if(avg < 60) return "F";
-    else if(60 >= avg < 70) return "D";
-    else if(70 >= avg < 80) return "C";
-    else if(80 >= avg <= 89) return "B";
-    else return "A"
+    if(avg < 70) return "D";
+    if(avg < 80) return "C";
+    if(avg < 89) return "B";
+    return "A"
 
 }
 
+
+function calculateAverage(array){
+    var sum = 0;
+    for(let value of array)
+        sum += value;
+    
+    return sum / array.length;
+}
+
 console.log(calculateGrade(marks));
+
