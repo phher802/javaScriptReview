@@ -3,23 +3,16 @@
 
 
 function sum(limit){
- 
-var results = 0;
+    var results = 0;
+    
+    for(let i = 0; i <= limit; i++){
+      if(i % 3 === 0 || i % 5 === 0){
+          console.log(i);
+          results += i     
+        }
+    }
 
-  for(let i = 0; i <= limit; i++){
-  
-      if(i % 3 === 0){
-          console.log(i);
-          results += i;
-      }
-      if(i % 5 ===  0){
-          console.log(i);
-          results += i;
-      }
-      
-  }
   return results;
-
 }
 
 console.log(sum(10));
