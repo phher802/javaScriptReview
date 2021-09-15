@@ -30,5 +30,5 @@ function calculateAverage(array){
     return sum / array.length;
 }
 
-console.log(calculateGrade(marks));
+//console.log(calculateGrade(marks));
 
