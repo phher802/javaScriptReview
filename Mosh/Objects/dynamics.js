@@ -1,18 +1,18 @@
 //dynamic objects means once you create them, you can always add or create new properties or methods, or remove existing ones
 
 
-const circle = {
+const anotherCircle = {
     radius: 1
 }
 
 //add new properties 
-circle.color = "red";
+anotherCircle.color = "red";
 //add new methods
-circle.draw = function () {}
+anotherCircle.draw = function () {}
 
 //delete properties/methods
-delete circle.color;
-delete circle.draw;
+delete anotherCircle.color;
+delete anotherCircle.draw;
 
 console.log(circle);
 
