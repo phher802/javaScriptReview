@@ -16,6 +16,8 @@ const circle = {
 
 circle.draw();  //calling the circle draw method
 
+
+//***************** */
 //Factory Functions -- a way to produce objects
 //this example also simplifies the circle object above
 //uses camel case notation
@@ -33,6 +35,7 @@ console.log(circle1);
 const circle2 = createCircle(2);
 console.log(circle2);
 
+//************ */
 //Constructor Functions -- another way to create objects
 //use Pascal notation by convention -- first letter is capitalized
 //used more by developers who are familiar with other languages like C#
